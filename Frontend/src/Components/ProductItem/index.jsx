@@ -2,17 +2,52 @@ import React from "react";
 import "../ProductItem/style.css";
 import { Link } from "react-router-dom";
 import Rating from "@mui/material/Rating";
+import Button from "@mui/material/Button";
+import { FaRegHeart } from "react-icons/fa";
+import { IoGitCompareOutline } from "react-icons/io5";
+import { MdZoomOutMap } from "react-icons/md";
+
 const ProductItem = () => {
   return (
     <div className="productItem shadow-lg rounded-md overflow-hidden border border-[rgba(0,0,0,0.1)] ">
-      <div className="imgWrapper w-full h-[220px] overflow-hidden rounded-md relative">
+      {/* IMAGE */}
+      <div className="imgWrapper w-full   rounded-md relative">
+       <Link to="/">
+       <div className="img h-[250px] overflow-hidden">
         <img
           src="https://serviceapi.spicezgold.com/download/1753722939206_125c18d6-592d-4082-84e5-49707ae9a4fd1749366193911-Flying-Machine-Women-Wide-Leg-High-Rise-Light-Fade-Stretchab-1.jpg"
-          className="w-full"
+          className="w-full h-full object-cover"
         />
-        <span className="discount flex items-center absolute top-2.5 left-2.5 z-50 bg-#ff5252 text-white rounded-md "></span>
+        //second image for same image to change on hover in future
+        
+         {/* <img
+          src="https://serviceapi.spicezgold.com/download/1753722939206_125c18d6-592d-4082-84e5-49707ae9a4fd1749366193911-Flying-Machine-Women-Wide-Leg-High-Rise-Light-Fade-Stretchab-1.jpg"
+          className="w-full h-full object-cover"
+        /> */}
+        </div>
+</Link>
+        {/* DISCOUNT */}
+        <span className="absolute top-2 left-2 bg-[#ff5252] text-white px-2 py-0.5 rounded-md text-[12px] z-50">
+          10%
+        </span>
+
+        {/* ACTION ICONS */}
+        <div className="actions absolute top-3 right-3 z-50 flex flex-col gap-2 transition-all  group-hover:opacity-100">
+          <Button className="w-[35px] h-[35px] min-w-[35px] rounded-full bg-white hover:bg-primary hover:text-white group">
+            <MdZoomOutMap className="text-[18px] text-black group-hover:text-white" />
+          </Button>
+
+          <Button className="w-[35px] h-[35px] min-w-[35px] rounded-full bg-white hover:bg-primary hover:text-white group">
+            <IoGitCompareOutline className="text-[18px] text-black group-hover:text-white" />
+          </Button>
+
+          <Button className="w-[35px] h-[35px] min-w-[35px] rounded-full bg-white hover:bg-primary hover:text-white group">
+            <FaRegHeart className="text-[18px] text-black group-hover:text-white" />
+          </Button>
+        </div>
       </div>
 
+      {/* INFO */}
       <div className="info p-3 py-5">
         <h6 className="text-[13px]">
           <Link to="/" className="link transition-all">
@@ -20,15 +55,17 @@ const ProductItem = () => {
           </Link>
         </h6>
 
-        <h3 className="text-[13px] mt-1 mb-1 font-medium text-black">
+        <h3 className="text-[14px] mt-1 font-medium text-black">
           <Link to="/" className="link transition-all">
             Siril Georgette Pink Color Saree with Blouse Piece
           </Link>
         </h3>
-        <Rating name="size-small " defaultValue={4} size="small" readOnly />
-        <div className="flex items-center gap-4">
-<span className="oldPrice line-through text-gray-500 text-[15px] font-medium"> $58.00 </span>
-<span className="price text-[#ff5252]  text-[15px] font-semibold">58.00</span>
+
+        <Rating defaultValue={4} size="small" readOnly />
+
+        <div className="flex items-center gap-3 mt-1">
+          <span className="line-through text-gray-500">$58.00</span>
+          <span className="text-[#ff5252] font-semibold">$30.00</span>
         </div>
       </div>
     </div>

@@ -8,7 +8,7 @@ import { Navigation } from "swiper/modules";
 
 const HomeSlider = () => {
   return (
-    <div className="homeSlider py-6">
+    <div className="homeSlider py-6!">
       <div className="container">
         <Swiper
           slidesPerView={5}
