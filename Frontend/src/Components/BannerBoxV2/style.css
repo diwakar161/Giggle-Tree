@@ -1,0 +1,7 @@
+.bannerBoxV2{
+    height:210px !important;
+     position: relative;
+}
+.bannerBoxV2 .info {
+  transition: all 0.4s ease-in-out;
+}

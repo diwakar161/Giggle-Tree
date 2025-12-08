@@ -3,14 +3,20 @@ import HomeSlider from "../../Components/HomeSlider";
 import HomeCatSlider from "../../Components/HomeCatSlider";
 import { TbTruckDelivery } from "react-icons/tb";
 import AdsBannerSlider from "../../Components/AdsBannerSlider";
+import AdsBannerSliderV2 from "../../Components/AdsBannerSliderV2";
+
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import ProductSlider from "../../Components/ProductSlider";
-// import {LiaShippingFastSolid} from 'react-icons/lia'
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+// import { Navigation } from "swiper";
+import { Navigation } from "swiper/modules";
+
 import "swiper/css/navigation";
+import BlogItem from "../../Components/BlogItem";
+import HomeBannerV2 from "../../Components/HomeSliderV2";
+import BannerBoxV2 from "../../Components/BannerBoxV2";
 export default function Home() {
   const [value, setValue] = React.useState(0);
 
@@ -21,6 +27,30 @@ export default function Home() {
   return (
     <>
       <HomeSlider />
+      <section className="py-6">
+        <div className="container flex gap-5">
+          <div className="part1 w-[70%]">
+            <HomeBannerV2 />
+          </div>
+
+          <div className="part2 w-[30%] flex items-center gap-5 justify-between flex-col">
+            <BannerBoxV2
+              info="left"
+              image={
+                "https://serviceapi.spicezgold.com/download/1760160666204_1737020916820_New_Project_52.jpg"
+              }
+            />
+
+            <BannerBoxV2
+              info="right"
+              image={
+                "https://serviceapi.spicezgold.com/download/1741664665391_1741497254110_New_Project_50.jpg"
+              }
+            />
+          </div>
+        </div>
+      </section>
+
       <HomeCatSlider />
 
       <section className="bg-white py-8!">
@@ -76,7 +106,7 @@ export default function Home() {
           </div>
         </div>
 
-        <AdsBannerSlider items={5} />
+        <AdsBannerSliderV2 items={5} />
       </section>
 
       <section className="py-5! bg-white pt-0!">
@@ -94,6 +124,42 @@ export default function Home() {
           <AdsBannerSlider items={3} />
         </div>
       </section>
+
+      <section className="py-5 pt-0 pb-8 bg-white blogSection">
+        <div className="container">
+          <h2 className="text-[20px] mb-4 important! font-semibold">
+            From The Blog
+          </h2>
+          <Swiper
+            slidesPerView={4}
+            spaceBetween={25}
+            navigation={true}
+            modules={[Navigation]}
+            className="blogSlider"
+          >
+            <SwiperSlide>
+              <BlogItem />
+            </SwiperSlide>
+            <SwiperSlide>
+              <BlogItem />
+            </SwiperSlide>
+            <SwiperSlide>
+              <BlogItem />
+            </SwiperSlide>
+            <SwiperSlide>
+              <BlogItem />
+            </SwiperSlide>
+            <SwiperSlide>
+              <BlogItem />
+            </SwiperSlide>
+            <SwiperSlide>
+              <BlogItem />
+            </SwiperSlide>
+          </Swiper>
+        </div>
+      </section>
+
+      
     </>
   );
 }

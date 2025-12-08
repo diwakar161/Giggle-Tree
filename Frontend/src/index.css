@@ -23,6 +23,12 @@ body {
   color:rgba(0, 0, 0, 0.9);
   overflow-x: hidden !important;
 }
+.btn-org{background:#ff5252 !important;
+color:#fff !important;
+font-weight:500;
+font-size:16px;
+padding:7px 20px !important;
+}
 
 .link:hover{
     color: #ff5252;
@@ -120,3 +126,61 @@ background-color: #ff5252;
   margin-left: -15px !important;
   margin-right: -15px !important  ;
 }
+footer form input::placeholder{
+ font-size:14px;
+}
+.css-imrgqg-MuiButtonBase-root-MuiCheckbox-root.Mui-checked,
+.css-imrgqg-MuiButtonBase-root-MuiCheckbox-root.MuiCheckbox-indeterminate {
+  color: #ff5252 !important;
+}
+
+.MuiFormControlLabel-label {
+  font-size: 13px !important;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.swiper-pagination-bullet-active {
+  background: #ff5252 !important;
+}
+/* Info box animation */
+.homeSliderV2 .swiper-slide-active .info {
+  opacity: 1 !important;
+  right: 0px !important;
+  transition-duration: 0.8s;
+}
+
+/* h4 animation */
+.homeSliderV2 .swiper-slide-active .info h4 {
+  opacity: 1 !important;
+  right: 0px !important;
+  transition-duration: 1.5s;
+}
+
+/* h2 animation */
+.homeSliderV2 .swiper-slide-active .info h2 {
+  opacity: 1 !important;
+  right: 0px !important;
+  transition-duration: 2s;
+}
+
+.homeSliderV2 .swiper-slide-active .info button {
+  bottom:0px !important;
+  opacity: 1;;
+}
+
+/* h3 animation */
+.homeSliderV2 .swiper-slide-active .info h3 {
+  opacity: 1 !important;
+  right: 0px !important;
+  transition-duration: 2.5s;
+}
+
+.container{width:95%; margin:auto}
+
+
+.MuiCheckbox-root{padding:6px !important}
+
+.MuiCheckbox-colorPrimary.Mui-checked{
+  color:#ff5252 !important
+}
+

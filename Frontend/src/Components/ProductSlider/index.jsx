@@ -13,7 +13,7 @@ const ProductSlider = (props) => {
         slidesPerView={props.items}
         spaceBetween={8}
         navigation={true}
-        modules={[Navigation]}
+        modules={[Navigation]}  
         className="mySwiper"
       >
         <SwiperSlide>
@@ -31,12 +31,12 @@ const ProductSlider = (props) => {
         <SwiperSlide>
           <ProductItem />
         </SwiperSlide>
-         <SwiperSlide>
-           <ProductItem/>
-          </SwiperSlide>
-           <SwiperSlide>
-           <ProductItem/>
-          </SwiperSlide>
+        <SwiperSlide>
+          <ProductItem />
+        </SwiperSlide>
+        <SwiperSlide>
+          <ProductItem />
+        </SwiperSlide>
       </Swiper>
     </div>
   );
