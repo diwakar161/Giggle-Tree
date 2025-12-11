@@ -3,49 +3,59 @@
 @tailwind utilities;
  */
 @import "tailwindcss";
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 .container {
   width: 95%;
   margin: auto;
 }
 
-sliderHome{
-    overflow: hidden !important;
+sliderHome {
+  overflow: hidden !important;
 }
 body {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   background: #f5f0f0;
-  color:rgba(0, 0, 0, 0.9);
+  color: #3e3e3e;
   overflow-x: hidden !important;
 }
-.btn-org{background:#ff5252 !important;
-color:#fff !important;
-font-weight:500;
-font-size:16px;
-padding:7px 20px !important;
-}
-.btn-org:hover{
-  background:#171717   !important;
- 
+p{
+  font-size:14px;
+  line-height: 25px;
+  margin-bottom: 10px;
+   margin-top: 10px;
 }
 
-.link:hover{
-    color: #ff5252;
+h1,h2,h3,h4,h5,h6{
+  font-weight: 600;
 }
-.MuiBadge-badge{
+
+.btn-org {
+  background: #ff5252 !important;
+  color: #fff !important;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 7px 20px !important;
+}
+.btn-org:hover {
+  background: #171717 !important;
+}
+
+.link:hover {
+  color: #ff5252;
+}
+.MuiBadge-badge {
   background-color: #ff5252 !important;
 }
-Nav ul button{
-  text-transform: capitalize !important ;;
-
+Nav ul button {
+  text-transform: capitalize !important ;
 }
-nav ul button:hover{
-  background: none !important
+nav ul button:hover {
+  background: none !important;
 }
 /* Fix Swiper Button Size (FINAL) */
 .swiper-button-prev,
@@ -59,79 +69,77 @@ nav ul button:hover{
   align-items: center !important;
   justify-content: center !important;
 
-  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
 }
 
 /* Fix Arrow Icon Size */
 .swiper-button-prev::after,
 .swiper-button-next::after {
-  font-weight: 300 !important;  /* thin arrow */
+  font-weight: 300 !important; /* thin arrow */
   color: #000 !important;
 }
 
-
 .homeCatslider {
-    overflow: inherit !important;
-    margin-top: 40px;
+  overflow: inherit !important;
+  margin-top: 40px;
 }
 
 .homeCatslider .swiper-button-prev,
 .homeCatslider .swiper-button-next {
-    width: 30px;
-    height: 30px;
-    min-width: 30px;
+  width: 30px;
+  height: 30px;
+  min-width: 30px;
 }
 
 .homeCatslider .swiper-button-prev::after,
 .homeCatslider .swiper-button-next::after {
-    font-size: 16px !important;
+  font-size: 16px !important;
 }
 
 .homeCatslider .swiper-button-prev {
-    left: -10px !important;
+  left: -10px !important;
 }
 
 .homeCatslider .swiper-button-next {
-    right: -10px !important;
+  right: -10px !important;
 }
 
 .homeCatslider .item {
-    border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .homeCatslider .swiper-button-prev:hover,
 .homeCatslider .swiper-button-next:hover {
-    background: #ff5252 !important;
+  background: #ff5252 !important;
 }
 
 .homeCatslider .swiper-button-prev:hover::after,
 .homeCatslider .swiper-button-next:hover::after {
-    color: #fff !important;
+  color: #fff !important;
 }
 ::-webkit-scrollbar {
   width: 6px !important;
   height: 8px !important;
-
 }
-::webkit-scrollbar-track{
-background-color: #ccc;
+::webkit-scrollbar-track {
+  background-color: #ccc;
 }
-::-webkit-scrollbar-thumb{
-background-color: #ff5252;
+::-webkit-scrollbar-thumb {
+  background-color: #ff5252;
 }
-.MuiTabs-indicator{
+.MuiTabs-indicator {
   background-color: #ff5252 !important;
 }
-.MuiTab-textColorPrimary.Mui-selected{
+.MuiTab-textColorPrimary.Mui-selected {
   color: #ff5252 !important;
 }
-.productSlider.swiper-wrapper{
+.productSlider.swiper-wrapper {
   padding: 15px !important;
   margin-left: -15px !important;
   margin-right: -15px !important  ;
 }
-footer form input::placeholder{
- font-size:14px;
+footer form input::placeholder {
+  font-size: 14px;
 }
 .css-imrgqg-MuiButtonBase-root-MuiCheckbox-root.Mui-checked,
 .css-imrgqg-MuiButtonBase-root-MuiCheckbox-root.MuiCheckbox-indeterminate {
@@ -168,8 +176,8 @@ footer form input::placeholder{
 }
 
 .homeSliderV2 .swiper-slide-active .info button {
-  bottom:0px !important;
-  opacity: 1;;
+  bottom: 0px !important;
+  opacity: 1;
 }
 
 /* h3 animation */
@@ -179,20 +187,83 @@ footer form input::placeholder{
   transition-duration: 2.5s;
 }
 
-.container{width:95%; margin:auto}
-
-
-.MuiCheckbox-root{padding:6px !important}
-
-.MuiCheckbox-colorPrimary.Mui-checked{
-  color:#ff5252 !important
+.container {
+  width: 95%;
+  margin: auto;
 }
 
-.ReactCollapse--collapse{
+.MuiCheckbox-root {
+  padding: 6px !important;
+}
+
+.MuiCheckbox-colorPrimary.Mui-checked {
+  color: #ff5252 !important;
+}
+
+.ReactCollapse--collapse {
   transition: height 400ms !important;
 }
-.itemViewActions button.active svg{color:#ff5252 !important;opacity: 1;}
-.Mui-selected.MuiPaginationItem-page{
+.itemViewActions button.active svg {
+  color: #ff5252 !important;
+  opacity: 1;
+}
+.Mui-selected.MuiPaginationItem-page {
   background: #ff5252 !important;
   color: #fff !important;
+}
+.shadow-md,.shadow-lg{
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2) !important;
+}
+/* .zoomProductSliderThumbs.swipper-slide{
+  height: auto !important;
+  
+} */
+
+.zoomProductSliderThumbs {
+  height: 500px !important;
+}
+
+.zoomProductSliderThumbs .swiper-slide {
+  width: 100% !important;
+  height: 110px !important;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.zoomProductSliderThumbs .swiper-slide-thumb-active {
+  opacity: 1;
+  border: 2px solid #000;
+}
+
+.zoomProductSliderThumbs img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.zoomContainer {
+  border: 1px solid #eee;
+  padding: 10px;
+  border-radius: 8px;
+}
+.productContent.actions button{
+  min-height: 40px !important;
+border:2px solid rgba(0, 0, 0, 0.1) !important;
+color:rgba(0, 0, 0, 0.7);
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance:none;
+  appearance: none;
+  
+}
+
+.reviewScroll::-webkit-scrollbar-thumb {
+  background: #ccc !important;
+}
+.reviewScroll::-webkit-scrollbar{
+  width: 5px !important;
+  height: 5px !important;
 }
