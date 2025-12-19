@@ -1,15 +1,19 @@
-import React from "react";
-import { Link } from "react-router-dom"; // ✅ should be react-router-dom
+import React, { useContext } from "react";
+import { Link } from "react-router-dom"; // ✅ correct import
 import Search from "./Search";
 import Badge from "@mui/material/Badge";
 import { styled } from "@mui/material/styles";
 import IconButton from "@mui/material/IconButton";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import logo from "../../assets/images/logo.png";
-import { IoGitCompare } from "react-icons/io5";
-import { FaRegHeart } from "react-icons/fa6";
 import Tooltip from "@mui/material/Tooltip";
+
+import logo from "../../assets/images/logo.png";
 import Navigation from "./Navigation";
+import { IoGitCompareOutline } from "react-icons/io5";
+import { FaRegHeart } from "react-icons/fa6";
+
+/* ✅ CONTEXT IMPORT (ONLY FIX) */
+import { MyContext } from "../../App";
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
   "& .MuiBadge-badge": {
@@ -21,6 +25,8 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 }));
 
 const Header = () => {
+  const context = useContext(MyContext);
+
   return (
     <header className="bg-white">
       {/* Top Strip */}
@@ -97,7 +103,7 @@ const Header = () => {
                 <Tooltip title="Compare">
                   <IconButton aria-label="compare">
                     <StyledBadge badgeContent={2} color="secondary">
-                      <IoGitCompare size={22} />
+                      <IoGitCompareOutline size={22} />
                     </StyledBadge>
                   </IconButton>
                 </Tooltip>
@@ -117,7 +123,10 @@ const Header = () => {
               {/* Cart */}
               <li>
                 <Tooltip title="Cart">
-                  <IconButton aria-label="cart">
+                  <IconButton
+                    aria-label="cart"
+                    onClick={() => context.setOpenCartPanel(true)}
+                  >
                     <StyledBadge badgeContent={4} color="secondary">
                       <ShoppingCartIcon />
                     </StyledBadge>
@@ -128,6 +137,7 @@ const Header = () => {
           </div>
         </div>
       </div>
+
       <Navigation />
     </header>
   );

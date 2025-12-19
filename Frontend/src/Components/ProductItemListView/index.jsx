@@ -8,8 +8,11 @@ import { IoGitCompareOutline } from "react-icons/io5";
 import { MdZoomOutMap } from "react-icons/md";
 // import { MdCutlineShoppingCart } from "react-icons/md";
 import { MdOutlineRemoveShoppingCart } from "react-icons/md";
+import { MyContext } from "../../App";
+import { useContext } from "react";
 
 const ProductItem = () => {
+  const context = useContext(MyContext);
   return (
     <div className="productItem shadow-lg rounded-md overflow-hidden border border-[rgba(0,0,0,0.1)] flex items-center ">
       {/* IMAGE */}
@@ -34,7 +37,7 @@ const ProductItem = () => {
 
         {/* ACTION ICONS */}
         <div className="actions absolute top-3 right-3 z-50 flex flex-col gap-2 transition-all  group-hover:opacity-100">
-          <Button className="w-[35px] h-[35px] min-w-[35px] rounded-full bg-white hover:bg-primary hover:text-white group">
+          <Button className="w-[35px] h-[35px] min-w-[35px] rounded-full bg-white hover:bg-primary hover:text-white group" onClick={() => context.setOpenProductDetailsModal(true)}>
             <MdZoomOutMap className="text-[18px] text-black group-hover:text-white" />
           </Button>
 

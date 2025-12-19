@@ -1,21 +1,23 @@
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities;
- */
+/* Tailwind */
 @import "tailwindcss";
+
+/* Global Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-.container {
-  width: 95%;
-  margin: auto;
+
+/* Root full size (important for centering pages) */
+html,
+body,
+#root {
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0;
 }
 
-sliderHome {
-  overflow: hidden !important;
-}
+/* Body */
 body {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
@@ -23,62 +25,116 @@ body {
   color: #3e3e3e;
   overflow-x: hidden !important;
 }
-p{
-  font-size:14px;
-  line-height: 25px;
-  margin-bottom: 10px;
-   margin-top: 10px;
+
+/* Container (single source of truth) */
+.container {
+  width: 95%;
+  margin: auto;
 }
 
-h1,h2,h3,h4,h5,h6{
+/* Typography */
+p {
+  font-size: 14px;
+  line-height: 25px;
+  margin: 10px 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 600;
 }
 
+/* Buttons */
 .btn-org {
   background: #ff5252 !important;
   color: #fff !important;
   font-weight: 500;
   font-size: 16px;
+  padding: 10px 20px !important;
+}
+
+.btn-lg {
+  font-size: 18px !important;
   padding: 7px 20px !important;
 }
+
 .btn-org:hover {
   background: #171717 !important;
 }
 
+/* Links */
 .link:hover {
   color: #ff5252;
 }
-.MuiBadge-badge {
+
+/* MUI overrides */
+.MuiBadge-badge,
+.MuiTabs-indicator,
+.MuiCheckbox-colorPrimary.Mui-checked,
+.Mui-selected.MuiPaginationItem-page {
   background-color: #ff5252 !important;
 }
-Nav ul button {
-  text-transform: capitalize !important ;
+
+.MuiTab-textColorPrimary.Mui-selected {
+  color: #ff5252 !important;
 }
+
+.MuiCheckbox-root {
+  padding: 6px !important;
+}
+
+.MuiFormControlLabel-label {
+  font-size: 13px !important;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+/* Navbar */
+Nav ul button {
+  text-transform: capitalize !important;
+}
+
 nav ul button:hover {
   background: none !important;
 }
-/* Fix Swiper Button Size (FINAL) */
+
+/* Shadows */
+.shadow-md,
+.shadow-lg {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Swiper Global */
+.sliderHome {
+  overflow: hidden !important;
+}
+
 .swiper-button-prev,
 .swiper-button-next {
   width: 40px !important;
   height: 40px !important;
   border-radius: 50% !important;
   background: #ffffff !important;
-
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
 }
 
-/* Fix Arrow Icon Size */
 .swiper-button-prev::after,
 .swiper-button-next::after {
-  font-weight: 300 !important; /* thin arrow */
+  font-weight: 300 !important;
   color: #000 !important;
 }
 
+.swiper-pagination-bullet-active {
+  background: #ff5252 !important;
+}
+
+/* Home Category Slider */
 .homeCatslider {
   overflow: inherit !important;
   margin-top: 40px;
@@ -88,7 +144,6 @@ nav ul button:hover {
 .homeCatslider .swiper-button-next {
   width: 30px;
   height: 30px;
-  min-width: 30px;
 }
 
 .homeCatslider .swiper-button-prev::after,
@@ -117,114 +172,55 @@ nav ul button:hover {
 .homeCatslider .swiper-button-next:hover::after {
   color: #fff !important;
 }
+
+/* Scrollbar */
 ::-webkit-scrollbar {
   width: 6px !important;
   height: 8px !important;
 }
-::webkit-scrollbar-track {
+
+::-webkit-scrollbar-track {
   background-color: #ccc;
 }
+
 ::-webkit-scrollbar-thumb {
   background-color: #ff5252;
 }
-.MuiTabs-indicator {
-  background-color: #ff5252 !important;
-}
-.MuiTab-textColorPrimary.Mui-selected {
-  color: #ff5252 !important;
-}
+
+/* Product Slider */
 .productSlider.swiper-wrapper {
   padding: 15px !important;
-  margin-left: -15px !important;
-  margin-right: -15px !important  ;
+  margin: -15px !important;
 }
+
+/* Footer */
 footer form input::placeholder {
   font-size: 14px;
 }
-.css-imrgqg-MuiButtonBase-root-MuiCheckbox-root.Mui-checked,
-.css-imrgqg-MuiButtonBase-root-MuiCheckbox-root.MuiCheckbox-indeterminate {
-  color: #ff5252 !important;
-}
 
-.MuiFormControlLabel-label {
-  font-size: 13px !important;
-  color: rgba(0, 0, 0, 0.8);
-}
-
-.swiper-pagination-bullet-active {
-  background: #ff5252 !important;
-}
-/* Info box animation */
-.homeSliderV2 .swiper-slide-active .info {
-  opacity: 1 !important;
-  right: 0px !important;
-  transition-duration: 0.8s;
-}
-
-/* h4 animation */
-.homeSliderV2 .swiper-slide-active .info h4 {
-  opacity: 1 !important;
-  right: 0px !important;
-  transition-duration: 1.5s;
-}
-
-/* h2 animation */
-.homeSliderV2 .swiper-slide-active .info h2 {
-  opacity: 1 !important;
-  right: 0px !important;
-  transition-duration: 2s;
-}
-
-.homeSliderV2 .swiper-slide-active .info button {
-  bottom: 0px !important;
-  opacity: 1;
-}
-
-/* h3 animation */
-.homeSliderV2 .swiper-slide-active .info h3 {
-  opacity: 1 !important;
-  right: 0px !important;
-  transition-duration: 2.5s;
-}
-
-.container {
-  width: 95%;
-  margin: auto;
-}
-
-.MuiCheckbox-root {
-  padding: 6px !important;
-}
-
-.MuiCheckbox-colorPrimary.Mui-checked {
-  color: #ff5252 !important;
-}
-
+/* Animations */
 .ReactCollapse--collapse {
   transition: height 400ms !important;
 }
+
+/* Product View */
 .itemViewActions button.active svg {
   color: #ff5252 !important;
   opacity: 1;
 }
-.Mui-selected.MuiPaginationItem-page {
-  background: #ff5252 !important;
-  color: #fff !important;
-}
-.shadow-md,.shadow-lg{
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2) !important;
-}
-/* .zoomProductSliderThumbs.swipper-slide{
-  height: auto !important;
-  
-} */
 
+.productContent.actions button {
+  min-height: 40px !important;
+  border: 2px solid rgba(0, 0, 0, 0.1) !important;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+/* Zoom Product */
 .zoomProductSliderThumbs {
   height: 500px !important;
 }
 
 .zoomProductSliderThumbs .swiper-slide {
-  width: 100% !important;
   height: 110px !important;
   opacity: 0.5;
   cursor: pointer;
@@ -247,23 +243,21 @@ footer form input::placeholder {
   padding: 10px;
   border-radius: 8px;
 }
-.productContent.actions button{
-  min-height: 40px !important;
-border:2px solid rgba(0, 0, 0, 0.1) !important;
-color:rgba(0, 0, 0, 0.7);
-}
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  -moz-appearance:none;
+
+/* Input fixes */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
   appearance: none;
-  
+}
+
+/* Reviews */
+.reviewScroll::-webkit-scrollbar {
+  width: 5px !important;
 }
 
 .reviewScroll::-webkit-scrollbar-thumb {
   background: #ccc !important;
 }
-.reviewScroll::-webkit-scrollbar{
-  width: 5px !important;
-  height: 5px !important;
+.cartPanel .MuiPaper-root{width:400px;
+overflow:hidden !important;
 }
