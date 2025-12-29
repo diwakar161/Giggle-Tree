@@ -9,16 +9,19 @@ const CartPanel = () => {
         <div className="cartItem w-full flex items-center gap-4 border-b border-[rgba(0,0,0,0.1)] pb-4 ">
           <div className="img w-[25%] overflow-hidden h-20 rounded-md">
             <Link to={"/product/45875"} className="block group">
-            <img
-              src="https://serviceapi.spicezgold.com/download/1753722939206_125c18d6-592d-4082-84e5-49707ae9a4fd1749366193911-Flying-Machine-Women-Wide-Leg-High-Rise-Light-Fade-Stretchab-1.jpg"
-              className="w-full group-hover:scale-105 "
-            />
+              <img
+                src="https://serviceapi.spicezgold.com/download/1753722939206_125c18d6-592d-4082-84e5-49707ae9a4fd1749366193911-Flying-Machine-Women-Wide-Leg-High-Rise-Light-Fade-Stretchab-1.jpg"
+                className="w-full group-hover:scale-105 "
+              />
             </Link>
           </div>
 
           <div className="info w-[75%] pr-5 relative">
             <h4 className="text-[14px] font-medium">
-             <Link to={"/product/45875"} className="link transition-all"> Women Solid Round Green T-Shirt</Link>
+              <Link to={"/product/45875"} className="link transition-all">
+                {" "}
+                Women Solid Round Green T-Shirt
+              </Link>
             </h4>
 
             <p className="flex items-center gap-5 mt-2 mb-2">
@@ -34,16 +37,19 @@ const CartPanel = () => {
         <div className="cartItem w-full flex items-center gap-4 border-b border-[rgba(0,0,0,0.1)] pb-4 ">
           <div className="img w-[25%] overflow-hidden h-20 rounded-md">
             <Link to={"/product/45875"} className="block group">
-            <img
-              src="https://serviceapi.spicezgold.com/download/1753722939206_125c18d6-592d-4082-84e5-49707ae9a4fd1749366193911-Flying-Machine-Women-Wide-Leg-High-Rise-Light-Fade-Stretchab-1.jpg"
-              className="w-full group-hover:scale-105 "
-            />
+              <img
+                src="https://serviceapi.spicezgold.com/download/1753722939206_125c18d6-592d-4082-84e5-49707ae9a4fd1749366193911-Flying-Machine-Women-Wide-Leg-High-Rise-Light-Fade-Stretchab-1.jpg"
+                className="w-full group-hover:scale-105 "
+              />
             </Link>
           </div>
 
           <div className="info w-[75%] pr-5 relative">
             <h4 className="text-[14px] font-medium">
-             <Link to={"/product/45875"} className="link transition-all"> Women Solid Round Green T-Shirt</Link>
+              <Link to={"/product/45875"} className="link transition-all">
+                {" "}
+                Women Solid Round Green T-Shirt
+              </Link>
             </h4>
 
             <p className="flex items-center gap-5 mt-2 mb-2">
@@ -59,16 +65,19 @@ const CartPanel = () => {
         <div className="cartItem w-full flex items-center gap-4 border-b border-[rgba(0,0,0,0.1)] pb-4 ">
           <div className="img w-[25%] overflow-hidden h-20 rounded-md">
             <Link to={"/product/45875"} className="block group">
-            <img
-              src="https://serviceapi.spicezgold.com/download/1753722939206_125c18d6-592d-4082-84e5-49707ae9a4fd1749366193911-Flying-Machine-Women-Wide-Leg-High-Rise-Light-Fade-Stretchab-1.jpg"
-              className="w-full group-hover:scale-105 "
-            />
+              <img
+                src="https://serviceapi.spicezgold.com/download/1753722939206_125c18d6-592d-4082-84e5-49707ae9a4fd1749366193911-Flying-Machine-Women-Wide-Leg-High-Rise-Light-Fade-Stretchab-1.jpg"
+                className="w-full group-hover:scale-105 "
+              />
             </Link>
           </div>
 
           <div className="info w-[75%] pr-5 relative">
             <h4 className="text-[14px] font-medium">
-             <Link to={"/product/45875"} className="link transition-all"> Women Solid Round Green T-Shirt</Link>
+              <Link to={"/product/45875"} className="link transition-all">
+                {" "}
+                Women Solid Round Green T-Shirt
+              </Link>
             </h4>
 
             <p className="flex items-center gap-5 mt-2 mb-2">
@@ -84,16 +93,19 @@ const CartPanel = () => {
         <div className="cartItem w-full flex items-center gap-4 border-b border-[rgba(0,0,0,0.1)] pb-4 ">
           <div className="img w-[25%] overflow-hidden h-20 rounded-md">
             <Link to={"/product/45875"} className="block group">
-            <img
-              src="https://serviceapi.spicezgold.com/download/1753722939206_125c18d6-592d-4082-84e5-49707ae9a4fd1749366193911-Flying-Machine-Women-Wide-Leg-High-Rise-Light-Fade-Stretchab-1.jpg"
-              className="w-full group-hover:scale-105 "
-            />
+              <img
+                src="https://serviceapi.spicezgold.com/download/1753722939206_125c18d6-592d-4082-84e5-49707ae9a4fd1749366193911-Flying-Machine-Women-Wide-Leg-High-Rise-Light-Fade-Stretchab-1.jpg"
+                className="w-full group-hover:scale-105 "
+              />
             </Link>
           </div>
 
           <div className="info w-[75%] pr-5 relative">
             <h4 className="text-[14px] font-medium">
-             <Link to={"/product/45875"} className="link transition-all"> Women Solid Round Green T-Shirt</Link>
+              <Link to={"/product/45875"} className="link transition-all">
+                {" "}
+                Women Solid Round Green T-Shirt
+              </Link>
             </h4>
 
             <p className="flex items-center gap-5 mt-2 mb-2">
@@ -109,16 +121,19 @@ const CartPanel = () => {
         <div className="cartItem w-full flex items-center gap-4 border-b border-[rgba(0,0,0,0.1)] pb-4 ">
           <div className="img w-[25%] overflow-hidden h-20 rounded-md">
             <Link to={"/product/45875"} className="block group">
-            <img
-              src="https://serviceapi.spicezgold.com/download/1753722939206_125c18d6-592d-4082-84e5-49707ae9a4fd1749366193911-Flying-Machine-Women-Wide-Leg-High-Rise-Light-Fade-Stretchab-1.jpg"
-              className="w-full group-hover:scale-105 "
-            />
+              <img
+                src="https://serviceapi.spicezgold.com/download/1753722939206_125c18d6-592d-4082-84e5-49707ae9a4fd1749366193911-Flying-Machine-Women-Wide-Leg-High-Rise-Light-Fade-Stretchab-1.jpg"
+                className="w-full group-hover:scale-105 "
+              />
             </Link>
           </div>
 
           <div className="info w-[75%] pr-5 relative">
             <h4 className="text-[14px] font-medium">
-             <Link to={"/product/45875"} className="link transition-all"> Women Solid Round Green T-Shirt</Link>
+              <Link to={"/product/45875"} className="link transition-all">
+                {" "}
+                Women Solid Round Green T-Shirt
+              </Link>
             </h4>
 
             <p className="flex items-center gap-5 mt-2 mb-2">
@@ -131,7 +146,6 @@ const CartPanel = () => {
             <MdOutlineDeleteOutline className="absolute top-2.5 right-2.5 cursor-pointer text-[20px] link transition-all" />
           </div>
         </div>
-        
       </div>
 
       <br />

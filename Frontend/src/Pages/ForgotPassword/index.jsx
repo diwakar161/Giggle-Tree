@@ -2,16 +2,15 @@ import React, { useState, useContext } from "react";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import { IoMdEye, IoMdEyeOff } from "react-icons/io";
-import { FcGoogle } from "react-icons/fc";
 import { useNavigate } from "react-router-dom";
 import { MyContext } from "../../App";
 
-const Login = () => {
-  const [isShowPassword, setIsShowPassword] = useState(false);
+const ForgotPassword = () => {
   const [formFields, setFormFields] = useState({
     email: "",
     password: "",
   });
+  const [isPasswordShow, setIsPasswordShow] = useState(false);
 
   const navigate = useNavigate();
   const context = useContext(MyContext);
@@ -23,43 +22,47 @@ const Login = () => {
     });
   };
 
-  const forgotPassword = () => {
-    if (formFields.email.trim() !== "") {
-      context.openAlertBox("success", "OTP sent to email");
-      navigate("/forgot-password");
-    } else {
-      context.openAlertBox("error", "Please enter email first");
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (
+      formFields.email.trim() === "" ||
+      formFields.password.trim() === ""
+    ) {
+      context.openAlertBox("error", "All fields are required");
+      return;
     }
+
+    context.openAlertBox("success", "Password reset successfully");
+    navigate("/login");
   };
 
   return (
     <section className="min-h-screen flex items-center justify-center bg-[#f5f0f0]">
       <div className="w-[420px] bg-white rounded-lg shadow-md p-8">
         <h3 className="text-center text-[18px] font-semibold mb-6">
-          Login to your account
+          Forgot Password
         </h3>
 
-        <form className="space-y-5">
+        <form className="space-y-5" onSubmit={handleSubmit}>
           {/* Email */}
           <TextField
             type="email"
-            id="email"
-            label="Email Id"
-            variant="outlined"
+            label="Email Address"
             name="email"
+            variant="outlined"
             fullWidth
             value={formFields.email}
             onChange={handleChange}
           />
 
-          {/* Password */}
+          {/* New Password */}
           <div className="relative">
             <TextField
-              type={isShowPassword ? "text" : "password"}
-              id="password"
-              label="Password"
-              variant="outlined"
+              type={isPasswordShow ? "text" : "password"}
+              label="New Password"
               name="password"
+              variant="outlined"
               fullWidth
               value={formFields.password}
               onChange={handleChange}
@@ -67,46 +70,29 @@ const Login = () => {
             <button
               type="button"
               className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500"
-              onClick={() => setIsShowPassword(!isShowPassword)}
+              onClick={() => setIsPasswordShow(!isPasswordShow)}
             >
-              {isShowPassword ? <IoMdEyeOff /> : <IoMdEye />}
+              {isPasswordShow ? <IoMdEyeOff /> : <IoMdEye />}
             </button>
           </div>
 
-          {/* Forgot Password */}
-          <p
-            className="text-sm font-medium cursor-pointer"
-            onClick={forgotPassword}
-          >
-            Forgot Password?
-          </p>
-
-          <Button className="btn-org w-full py-3 rounded-md">
-            LOGIN
+          <Button type="submit" className="btn-org w-full py-3 rounded-md">
+            RESET PASSWORD
           </Button>
 
           <p className="text-center text-sm">
-            Not Registered?{" "}
+            Remember password?{" "}
             <span
-              onClick={() => navigate("/register")}
+              onClick={() => navigate("/login")}
               className="text-[#ff5252] font-semibold cursor-pointer"
             >
-              Sign Up
+              Login
             </span>
           </p>
-
-          <p className="text-center text-sm font-medium">
-            Or continue with social account
-          </p>
-
-          <Button className="w-full flex items-center justify-center gap-3 bg-[#f1f1f1] text-black py-3 rounded-md">
-            <FcGoogle className="text-[20px]" />
-            LOGIN WITH GOOGLE
-          </Button>
         </form>
       </div>
     </section>
   );
 };
 
-export default Login;
+export default ForgotPassword;

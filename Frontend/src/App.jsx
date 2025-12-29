@@ -1,5 +1,3 @@
-
-
 import React, { createContext, useState } from "react";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Header from "./Components/Header";
@@ -16,6 +14,12 @@ import DialogContent from "@mui/material/DialogContent";
 import ProductZoom from "./Components/ProductZoom";
 import ProductDetailsComponent from "./Components/ProductDetails";
 import { IoCloseSharp } from "react-icons/io5";
+import CartPage from "./Pages/Cart";
+import Verify from "./Pages/verify";
+import ForgotPassword from "./Pages/ForgotPassword";
+
+import toast, { Toaster } from "react-hot-toast";
+import Checkout from "./Pages/Checkout";
 
 /* ✅ CREATE CONTEXT */
 export const MyContext = createContext(null);
@@ -28,11 +32,21 @@ function App() {
     setOpenCartPanel(newOpen);
   };
 
+  const openAlertBox = (status, msg) => {
+    if (status === "success") {
+      toast.success(msg);
+    }
+    if (status === "error") {
+      toast.error(msg);
+    }
+  };
+
   const values = {
     setOpenProductDetailsModal,
     setOpenCartPanel,
     toggleCartPanel,
     openCartPanel,
+    openAlertBox,
   };
 
   return (
@@ -47,11 +61,16 @@ function App() {
             <Route path="/product" element={<ProductDetails />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
+            <Route path="/cart" element={<CartPage />} />
+            <Route path="/verify" element={<Verify />} />
+            <Route path="/forgot-password" element={<ForgotPassword />} />
+            <Route path="/checkout" element={<Checkout />} />
           </Routes>
 
           <Footer />
         </MyContext.Provider>
       </BrowserRouter>
+      <Toaster />
 
       {/* Product Details Modal */}
       <Dialog
@@ -82,7 +101,6 @@ function App() {
       </Dialog>
 
       {/* Cart Drawer */}
-     
     </>
   );
 }
